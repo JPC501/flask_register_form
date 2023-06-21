@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/register.css')}}">
+    </head>
+<body>
+    <div class="testbox">
+        <h1>Registration</h1>
+      
+        <form method="post">
+            <hr>
+          <div class="accounttype">
+            <input type="radio" value="None" id="radioOne" name="account" checked/>
+            <label for="radioOne" class="radio" chec>Personal</label>
+            <input type="radio" value="None" id="radioTwo" name="account" />
+            <label for="radioTwo" class="radio">Company</label>
+          </div>
+        <hr>
+
+
+        <label id="icon" for="username"><i class="icon-user"></i></label>
+        <input type="text" name="username" id="username" placeholder="username" required minlength="4"/>
+        
+        <label id="icon" for="email"><i class="icon-envelope "></i></label>
+        <input type="text" name="email" id="email" placeholder="Email" required/>
+
+
+        <label id="icon" for="password"><i class="icon-shield"></i></label>
+        <input type="password" name="password" id="password" placeholder="Password" required maxlength="30"/>
+        
+        <div class="gender">
+          <input type="radio" value="None" id="male" name="gender" checked/>
+          <label for="male" class="radio" chec>Male</label>
+          <input type="radio" value="None" id="female" name="gender" />
+          <label for="female" class="radio">Female</label>
+         </div> 
+         <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+         <button class='form_button' type="submit" class="button">Register</button>
+        </form>
+      </div>
+      {% for mensaje in get_flashed_messages() %}
+            <div class="alert alert-danger d-flex justify-content-center align-items-center"
+                style="margin: 0 auto; width: 50%; text-align: center;" role="alert">
+                {{mensaje}}
+            </div>
+      {% endfor %}
+</body>
+</html>
