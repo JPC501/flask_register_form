@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Proyecto Registro de Usuario en Flask
 Descripción
@@ -38,3 +39,6 @@ Este proyecto está bajo la licencia MIT, lo que significa que puedes usarlo, co
 
 
 
+=======
+# flask_register_form
+>>>>>>> 91e5c8e422015995df8bea00c7cc76743c8a5864
