@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 Proyecto Registro de Usuario en Flask
 Descripción
